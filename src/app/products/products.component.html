@@ -1,0 +1,28 @@
+<div class="position-absolute container" style="left: 0; z-index:10">
+  <div class="row">
+    <div class="col-md-4" *ngFor="let product of products">
+      <div class="card media">
+          <img style="width:70px;" class="mr-3 rounded align-self-center ml-3 float-left img-fluid">
+          <div class="media-body align-self-center">
+            <div class="media">
+              <img style="width:150px;" class="mr-3 ml-3 mt-3 rounded align-self-center img-fluid" 
+              src="{{'./assets/images/' + product.name + '.jpg'}}">
+              <div class="media-body align-self-center">
+                <h5 class="m-0">{{product.name}}</h5>
+                {{product.description}}
+              </div> <!-- media body -->
+            </div> <!-- media -->
+            <h6 class="pt-1 text-center">Price : {{product.price| currency:"&#8377;"}}</h6>
+          </div><!-- media body -->
+          <input type="button" value="Add" class="btn btn-primary button-sx bottom-right mr-2 mb-2"
+          (click)="addItems($event,product)">
+      </div>
+    </div>
+  </div>
+  <div class="text-center">
+    <nav>
+      <input type="button" width="50px" value="Checkout" routerLink="/checkout/{{cartItems}}" 
+      class="btn btn-warning text-center block">
+    </nav>
+  </div> <!--textcenter-->
+</div><!-- container -->

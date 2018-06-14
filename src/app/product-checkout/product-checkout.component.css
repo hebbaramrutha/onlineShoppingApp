@@ -1,0 +1,14 @@
+.bottom-right{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    cursor: pointer;
+  }
+
+  .button-sx{
+    width: 60px;
+    height: 30px;
+    text-align: center;
+    padding: 0px;
+  }
+ 
